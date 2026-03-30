@@ -777,25 +777,82 @@ h1, h2, h3 {
   }
 }
 
-/* Mobile: один столбец — текст → интерактив → статистика */
+/* Mobile (телефон): один столбец — текст → точки → preview → статистика */
 @media (max-width: 767px) {
-  .about__grid {
+  #about .about__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
+    align-items: stretch;
   }
 
-  .about__copy {
+  #about .about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: static;
+  }
+
+  #about .about__copy {
     max-width: 100%;
+    margin: 0;
   }
 
-  .about__timeline {
-    margin-top: 18px;
+  #about .about__timeline {
+    margin-top: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 14px;
+    row-gap: 20px;
+    align-items: start;
+    width: 100%;
   }
 
-  .about__timeline-preview {
-    margin-top: 18px;
-    margin-left: auto;
-    margin-right: auto;
+  #about .about__timeline-rail {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: stretch;
+    grid-row-end: auto;
+  }
+
+  #about .about__timeline-items {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  #about .about__timeline-preview {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    justify-self: stretch;
+    aspect-ratio: 4 / 3;
+  }
+
+  #about .about__timeline-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: none;
+    transform-origin: center center;
+  }
+
+  #about .about__stats {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 24px;
+    margin-top: 0;
+  }
+
+  #about .stat:hover {
+    transform: none;
   }
 }
 
