@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мастерская Вадима Дубинина — Корпусная мебель премиального уровня</title>
+  <meta name="description" content="Корпусная мебель на заказ для частных клиентов и дизайнеров. Премиальное качество и индивидуальный подход.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Мастерская Вадима Дубинина" class="logo__img">
+      </a>
+      <nav class="nav">
+        <a href="#about" class="nav__link">О производстве</a>
+        <a href="#advantages" class="nav__link">Преимущества</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#stages" class="nav__link">Этапы</a>
+        <a href="#designers" class="nav__link">Для дизайнеров</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+      <a href="#consultation" class="btn btn--primary header__cta">Обсудить проект</a>
+      <button class="burger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-nav-overlay" aria-hidden="true"></div>
+    <nav class="mobile-nav">
+      <a href="#about" class="nav__link">О производстве</a>
+      <a href="#advantages" class="nav__link">Преимущества</a>
+      <a href="#portfolio" class="nav__link">Портфолио</a>
+      <a href="#stages" class="nav__link">Этапы</a>
+      <a href="#designers" class="nav__link">Для дизайнеров</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#contacts" class="nav__link">Контакты</a>
+      <a href="#consultation" class="btn btn--primary">Обсудить проект</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('assets/hero_final_2560.png');"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="hero__content-inner">
+        <img src="assets/logo.png" alt="VD" class="hero__logo">
+        <p class="hero__tagline">Мастерская мебели <span>ВАДИМА ДУБИНИНА</span></p>
+        <h1 class="hero__title">Мебель, которая становится частью интерьера.</h1>
+        <p class="hero__subtitle">Индивидуальная корпусная мебель<br>по проектам дизайнеров и частных интерьеров</p>
+        <p class="hero__kicker">Бесплатная консультация и предварительный расчёт</p>
+        <div class="hero__actions">
+          <a href="#consultation" class="btn btn--primary hero__btn">Записаться на консультацию</a>
+          <a href="#portfolio" class="btn btn--ghost hero__btn">Смотреть проекты</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">Прокрутите вниз</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--dark" id="about">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">О нас</span>
+        <h2 class="section__title">Производство корпусной мебели<br>по дизайн-проектам</h2>
+        <p class="section__subtitle">Делаем мебель по проектам дизайнеров без потери идеи на этапе производства</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__text animate-on-scroll">
+          <div class="about__copy">
+            <p>Мастерская Вадима Дубинина изготавливает корпусную мебель на заказ — по чертежам и визуализациям, с точным соблюдением размеров и узлов.</p>
+            <p>Производство ведём внутри мастерской: от раскроя и кромки до сборки и контроля качества. Мы отвечаем за результат на каждом этапе и не передаём работу «на сторону».</p>
+            <p>Вы получаете соответствие проекту без упрощений: материалы, геометрия, фасады и фурнитура — ровно так, как заложено в концепции.</p>
+          </div>
+
+          <div class="about__timeline" data-about-timeline>
+            <div class="about__timeline-rail" aria-hidden="true"></div>
+
+            <div class="about__timeline-items" role="list">
+              <button class="about__timeline-item is-active" type="button" role="listitem" data-about-step="1">
+                <span class="about__timeline-dot" aria-hidden="true"></span>
+                <span class="about__timeline-label">Вадим в цехе</span>
+              </button>
+
+              <button class="about__timeline-item" type="button" role="listitem" data-about-step="2">
+                <span class="about__timeline-dot" aria-hidden="true"></span>
+                <span class="about__timeline-label">Станки и процесс</span>
+              </button>
+
+              <button class="about__timeline-item" type="button" role="listitem" data-about-step="3">
+                <span class="about__timeline-dot" aria-hidden="true"></span>
+                <span class="about__timeline-label">Материалы крупным планом</span>
+              </button>
+
+              <button class="about__timeline-item" type="button" role="listitem" data-about-step="4">
+                <span class="about__timeline-dot" aria-hidden="true"></span>
+                <span class="about__timeline-label">Сборка / контроль качества</span>
+              </button>
+            </div>
+
+            <div class="about__timeline-preview">
+              <img class="about__timeline-img" src="images/img-01.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="about__stats animate-on-scroll">
+          <div class="stat">
+            <span class="stat__number">10+</span>
+            <span class="stat__label">лет опыта</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">200+</span>
+            <span class="stat__label">реализованных проектов</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">100%</span>
+            <span class="stat__label">индивидуальный подход</span>
+          </div>
+        </div>
+      </div>
+      <div class="section__actions animate-on-scroll">
+        <a href="#consultation" class="btn btn--ghost">Получить расчёт по вашему проекту</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">Почему мы</span>
+        <h2 class="section__title">Преимущества</h2>
+      </div>
+      <div class="advantages__grid">
+        <div class="advantage animate-on-scroll">
+          <div class="advantage__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="advantage__title">Индивидуальный проект</h3>
+          <p class="advantage__text">Каждый заказ разрабатывается с нуля под ваши размеры, стиль и бюджет.</p>
+        </div>
+        <div class="advantage animate-on-scroll">
+          <div class="advantage__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 20h32M8 28h32M12 36h24M12 12h24" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="advantage__title">Качественные материалы</h3>
+          <p class="advantage__text">Работаем только с проверенными поставщиками и фурнитурой Blum, Hettich.</p>
+        </div>
+        <div class="advantage animate-on-scroll">
+          <div class="advantage__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 16v8l4 4" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="advantage__title">Соблюдение сроков</h3>
+          <p class="advantage__text">Чёткий контроль этапов и прозрачные договорённости о сроках изготовления.</p>
+        </div>
+        <div class="advantage animate-on-scroll">
+          <div class="advantage__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8v32M8 24h32" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="advantage__title">Гарантия качества</h3>
+          <p class="advantage__text">Предоставляем гарантию на все изделия и сопровождаем после установки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section section--dark" id="portfolio">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">Работы</span>
+        <h2 class="section__title">Портфолио</h2>
+      </div>
+      <div class="portfolio__grid">
+        <a href="#portfolio" class="portfolio__item animate-on-scroll">
+          <div class="portfolio__img" style="background-image: url('assets/portfolio-livingroom.png');"></div>
+          <div class="portfolio__overlay">
+            <span class="portfolio__name">Гостиная</span>
+            <span class="portfolio__link">Смотреть</span>
+          </div>
+        </a>
+        <a href="#portfolio" class="portfolio__item animate-on-scroll">
+          <div class="portfolio__img" style="background-image: url('assets/portfolio-kitchen.png');"></div>
+          <div class="portfolio__overlay">
+            <span class="portfolio__name">Кухня</span>
+            <span class="portfolio__link">Смотреть</span>
+          </div>
+        </a>
+        <a href="#portfolio" class="portfolio__item animate-on-scroll">
+          <div class="portfolio__img" style="background-image: url('assets/portfolio-bedroom.png');"></div>
+          <div class="portfolio__overlay">
+            <span class="portfolio__name">Спальня</span>
+            <span class="portfolio__link">Смотреть</span>
+          </div>
+        </a>
+        <a href="#portfolio" class="portfolio__item animate-on-scroll">
+          <div class="portfolio__img" style="background-image: url('assets/portfolio-cabinet.png');"></div>
+          <div class="portfolio__overlay">
+            <span class="portfolio__name">Кабинет</span>
+            <span class="portfolio__link">Смотреть</span>
+          </div>
+        </a>
+      </div>
+      <div class="section__actions animate-on-scroll">
+        <a href="#portfolio" class="btn btn--ghost">Все проекты</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stages -->
+  <section class="section" id="stages">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">Процесс</span>
+        <h2 class="section__title">Этапы работы</h2>
+      </div>
+      <div class="stages">
+        <div class="stage animate-on-scroll">
+          <span class="stage__num">01</span>
+          <h3 class="stage__title">Заявка и встреча</h3>
+          <p class="stage__text">Обсуждаем задачу, выезжаем на замер, уточняем пожелания и бюджет.</p>
+        </div>
+        <div class="stage animate-on-scroll">
+          <span class="stage__num">02</span>
+          <h3 class="stage__title">Проектирование</h3>
+          <p class="stage__text">Разрабатываем 3D-визуализацию и чертежи, согласуем с заказчиком.</p>
+        </div>
+        <div class="stage animate-on-scroll">
+          <span class="stage__num">03</span>
+          <h3 class="stage__title">Изготовление</h3>
+          <p class="stage__text">Производство на нашем оборудовании с контролем качества на каждом этапе.</p>
+        </div>
+        <div class="stage animate-on-scroll">
+          <span class="stage__num">04</span>
+          <h3 class="stage__title">Доставка и монтаж</h3>
+          <p class="stage__text">Бережная доставка и профессиональная установка мебели.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Designers -->
+  <section class="section section--accent" id="designers">
+    <div class="container">
+      <div class="designers__grid">
+        <div class="designers__content animate-on-scroll">
+          <span class="section__label">Сотрудничество</span>
+          <h2 class="section__title">Для дизайнеров</h2>
+          <p class="designers__text">Работаем с дизайнерами интерьеров на выгодных условиях. Оптовые цены, приоритет в производстве, персональный менеджер.</p>
+          <ul class="designers__list">
+            <li>Скидки для постоянных партнёров</li>
+            <li>Помощь в подборе материалов и фурнитуры</li>
+            <li>Гибкие условия оплаты</li>
+          </ul>
+          <a href="#consultation" class="btn btn--primary">Обсудить сотрудничество</a>
+        </div>
+        <div class="designers__visual animate-on-scroll">
+          <div class="designers__card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--dark" id="reviews">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">Отзывы</span>
+        <h2 class="section__title">Что говорят клиенты</h2>
+      </div>
+      <div class="reviews__grid">
+        <div class="review animate-on-scroll">
+          <p class="review__text">«Заказывали кухню и гардеробную. Вадим помог с выбором материалов и фурнитуры. Результат превзошёл ожидания — мебель выглядит дорого и работает безупречно.»</p>
+          <span class="review__author">Анна К., Москва</span>
+        </div>
+        <div class="review animate-on-scroll">
+          <p class="review__text">«Работаю с мастерской уже третий проект. Качество на высоте, сроки соблюдаются. Рекомендую своим клиентам.»</p>
+          <span class="review__author">Дизайнер Елена М.</span>
+        </div>
+        <div class="review animate-on-scroll">
+          <p class="review__text">«Долго искали производителя для нестандартного шкафа в нишу. Вадим предложил отличное решение и реализовал его идеально.»</p>
+          <span class="review__author">Сергей и Мария, Подмосковье</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <span class="section__label">Связь</span>
+        <h2 class="section__title">Контакты</h2>
+      </div>
+      <div class="contacts__grid">
+        <div class="contacts__info animate-on-scroll">
+          <a href="tel:+79001234567" class="contact__item">+7 (900) 123-45-67</a>
+          <a href="mailto:info@dubinin-workshop.ru" class="contact__item">info@dubinin-workshop.ru</a>
+          <p class="contact__item">Москва, ул. Примерная, д. 1</p>
+          <div class="contacts__social">
+            <a href="https://t.me/dubinin_workshop" class="social__link" target="_blank" rel="noopener" aria-label="Telegram">Telegram</a>
+            <a href="https://wa.me/79001234567" class="social__link" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://vk.com/dubinin_workshop" class="social__link" target="_blank" rel="noopener" aria-label="VK">VK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Form -->
+  <section class="section section--dark" id="consultation">
+    <div class="container consultation__inner">
+      <div class="consultation__content animate-on-scroll">
+        <span class="section__label">Заявка</span>
+        <h2 class="section__title">Запись на консультацию</h2>
+        <p class="consultation__text">Оставьте заявку — мы свяжемся с вами в течение дня и обсудим ваш проект.</p>
+      </div>
+      <form class="consultation__form animate-on-scroll" action="#" method="post">
+        <div class="form__row">
+          <input type="text" name="name" placeholder="Ваше имя" required class="form__input">
+          <input type="tel" name="phone" placeholder="Телефон" required class="form__input">
+        </div>
+        <input type="email" name="email" placeholder="Email" class="form__input">
+        <textarea name="message" placeholder="Расскажите о вашем проекте" rows="4" class="form__input form__textarea"></textarea>
+        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo footer__logo">
+        <img src="assets/logo.png" alt="Мастерская Вадима Дубинина" class="logo__img">
+      </a>
+      <p class="footer__copyright">© 2025 Мастерская Вадима Дубинина</p>
+      <div class="footer__social">
+        <a href="https://t.me/dubinin_workshop" class="social__link" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79001234567" class="social__link" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+<!-- test -->
