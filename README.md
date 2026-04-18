@@ -15,15 +15,18 @@ npx serve .
 - `index.html` — разметка
 - `css/style.css` — стили, анимации, адаптив
 - `js/script.js` — скролл-анимации, мобильное меню, форма
+- `policy.html` — политика обработки персональных данных
 - `assets/` — hero-bg.png, logo.png
 
-## Ссылки-заглушки (заменить на реальные)
+## Контакты на сайте
 
-- **Телефон:** `+7 (900) 123-45-67`
-- **Email:** `info@dubinin-workshop.ru`
-- **Telegram:** `https://t.me/dubinin_workshop`
-- **WhatsApp:** `https://wa.me/79001234567`
-- **VK:** `https://vk.com/dubinin_workshop`
+- **Телефон:** `+7 904 285-82-50` (`tel:+79042858250`)
+- **Telegram:** `https://t.me/d_vadim48rus_b`
+- **WhatsApp:** `https://wa.me/79042858250`
+- **Адрес:** г. Липецк, ул. Студеновская, 122
+
+## Прочее
+
 - **Портфолио:** изображения — Unsplash (заменить на реальные фото проектов)
 
 ## Блоки

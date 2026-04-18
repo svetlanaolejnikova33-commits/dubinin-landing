@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initConsultationForm();
   initAboutTimeline();
+  initPortfolioViewer();
+  initPortfolio();
 });
 
 /**
@@ -195,4 +197,106 @@ function initAboutTimeline() {
 
   setActive(1);
   if (mediaImg) mediaImg.classList.add('is-visible');
+}
+
+function initPortfolioViewer() {
+  const covers = document.querySelectorAll('.portfolio__cover');
+  const groups = document.querySelectorAll('.portfolio-viewer__group');
+  const viewer = document.querySelector('#portfolio-viewer');
+
+  if (!covers.length || !groups.length || !viewer) return;
+
+  const scrollToViewerTop = () => {
+    const header = document.querySelector('.header');
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const topGutter = 20;
+    const y =
+      viewer.getBoundingClientRect().top + window.scrollY - headerHeight - topGutter;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  };
+
+  const setActiveGroup = (category) => {
+    covers.forEach((cover) => {
+      const isActive = cover.dataset.portfolioCategory === category;
+      cover.classList.toggle('is-active', isActive);
+      cover.setAttribute('aria-pressed', String(isActive));
+    });
+
+    groups.forEach((group) => {
+      const isActive = group.dataset.portfolioGroup === category;
+      group.classList.toggle('is-active', isActive);
+      group.style.opacity = isActive ? '1' : '0';
+    });
+  };
+
+  covers.forEach((cover) => {
+    cover.addEventListener('click', () => {
+      const category = cover.dataset.portfolioCategory;
+      setActiveGroup(category);
+      scrollToViewerTop();
+    });
+  });
+}
+
+/**
+ * Портфолио: lightbox по карточкам проектов
+ */
+function initPortfolio() {
+  const viewer = document.getElementById('portfolio-viewer');
+  const items = viewer
+    ? viewer.querySelectorAll('.portfolio__item[data-image]')
+    : document.querySelectorAll('.portfolio-viewer .portfolio__item[data-image]');
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lbImg = document.getElementById('portfolio-lightbox-img');
+  const lbTitle = lightbox?.querySelector('.portfolio__lightbox-title');
+  const lbCity = lightbox?.querySelector('.portfolio__lightbox-city');
+  const lbLead = lightbox?.querySelector('.portfolio__lightbox-lead');
+
+  if (!lightbox || !lbImg || !lbTitle || !lbCity || !lbLead) return;
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+  };
+
+  const openLightbox = (item) => {
+    const src = item.getAttribute('data-image');
+    if (!src) return;
+
+    const meta = item.querySelector('.portfolio__meta');
+    const titleEl = meta?.querySelector('h4') || item.querySelector('.portfolio__meta-title');
+    const cityEl = meta?.querySelector('p') || item.querySelector('.portfolio__meta-city');
+    const leadEl = meta?.querySelector('span') || item.querySelector('.portfolio__meta-lead');
+
+    lbImg.src = src;
+    lbImg.alt = titleEl ? titleEl.textContent.trim() : '';
+    lbTitle.textContent = titleEl ? titleEl.textContent.trim() : '';
+    lbCity.textContent = cityEl ? cityEl.textContent.trim() : '';
+    lbLead.textContent = leadEl ? leadEl.textContent.trim() : '';
+
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      openLightbox(item);
+    });
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(item);
+      }
+    });
+  });
+
+  lightbox.querySelectorAll('[data-portfolio-lightbox-close]').forEach((el) => {
+    el.addEventListener('click', closeLightbox);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) {
+      closeLightbox();
+    }
+  });
 }

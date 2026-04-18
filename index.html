@@ -15,7 +15,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="#" class="logo">
-        <img src="assets/logo.png" alt="Мастерская Вадима Дубинина" class="logo__img">
+        <img src="assets/logo.png" alt="VD" class="logo__img">
       </a>
       <nav class="nav">
         <a href="#about" class="nav__link">О производстве</a>
@@ -55,7 +55,7 @@
         <img src="assets/logo.png" alt="VD" class="hero__logo">
         <p class="hero__tagline">Мастерская мебели <span>ВАДИМА ДУБИНИНА</span></p>
         <h1 class="hero__title">Мебель, которая становится частью интерьера.</h1>
-        <p class="hero__subtitle">Индивидуальная корпусная мебель<br>по проектам дизайнеров и частных интерьеров</p>
+        <p class="hero__subtitle">Индивидуальная корпусная мебель<br>по проектам дизайнеров и частных заказчиков</p>
         <p class="hero__kicker">Бесплатная консультация и предварительный расчёт</p>
         <div class="hero__actions">
           <a href="#consultation" class="btn btn--primary hero__btn">Записаться на консультацию</a>
@@ -75,13 +75,13 @@
       <div class="section__header animate-on-scroll">
         <span class="section__label">О нас</span>
         <h2 class="section__title">Производство корпусной мебели<br>по дизайн-проектам</h2>
-        <p class="section__subtitle">Делаем мебель по проектам дизайнеров без потери идеи на этапе производства</p>
+        <p class="section__subtitle">Мы изготавливаем корпусную мебель по дизайн-проектам — без потери идеи на этапе производства.</p>
       </div>
       <div class="about__grid">
         <div class="about__text animate-on-scroll">
           <div class="about__copy">
-            <p>Мастерская Вадима Дубинина изготавливает корпусную мебель на заказ — по чертежам и визуализациям, с точным соблюдением размеров и узлов.</p>
-            <p>Производство ведём внутри мастерской: от раскроя и кромки до сборки и контроля качества. Мы отвечаем за результат на каждом этапе и не передаём работу «на сторону».</p>
+            <p>Работаем строго по чертежам и визуализациям, соблюдая геометрию, материалы и конструктив.</p>
+            <p>Производство полностью внутри мастерской: от раскроя до финальной сборки. Мы контролируем каждый этап и отвечаем за итоговый результат.</p>
             <p>Вы получаете соответствие проекту без упрощений: материалы, геометрия, фасады и фурнитура — ровно так, как заложено в концепции.</p>
           </div>
 
@@ -186,45 +186,188 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section class="section section--dark" id="portfolio">
+  <section class="portfolio section section--dark" id="portfolio">
     <div class="container">
-      <div class="section__header animate-on-scroll">
-        <span class="section__label">Работы</span>
-        <h2 class="section__title">Портфолио</h2>
+      <p class="section__eyebrow animate-on-scroll">Работы</p>
+      <h2 class="section__title animate-on-scroll">Портфолио</h2>
+
+      <div class="portfolio-showcase animate-on-scroll" aria-label="Направления работ">
+        <button type="button" class="portfolio__cover is-active" data-portfolio-category="kitchen" aria-pressed="true">
+          <div class="portfolio__cover-img" style="background-image:url('assets/portfolio-kitchen.png');"></div>
+          <div class="portfolio__cover-panel">
+            <span class="portfolio__cover-title">Кухни</span>
+            <span class="portfolio__cover-action">смотреть проекты</span>
+          </div>
+        </button>
+
+        <button type="button" class="portfolio__cover" data-portfolio-category="living" aria-pressed="false">
+          <div class="portfolio__cover-img" style="background-image:url('assets/portfolio-livingroom.png');"></div>
+          <div class="portfolio__cover-panel">
+            <span class="portfolio__cover-title">Гостиные</span>
+            <span class="portfolio__cover-action">смотреть проекты</span>
+          </div>
+        </button>
+
+        <button type="button" class="portfolio__cover" data-portfolio-category="bedroom" aria-pressed="false">
+          <div class="portfolio__cover-img" style="background-image:url('assets/portfolio-bedroom.png');"></div>
+          <div class="portfolio__cover-panel">
+            <span class="portfolio__cover-title">Спальни</span>
+            <span class="portfolio__cover-action">смотреть проекты</span>
+          </div>
+        </button>
+
+        <button type="button" class="portfolio__cover" data-portfolio-category="bathroom" aria-pressed="false">
+          <div class="portfolio__cover-img" style="background-image:url('assets/portfolio-bathroom.png');"></div>
+          <div class="portfolio__cover-panel">
+            <span class="portfolio__cover-title">Ванные</span>
+            <span class="portfolio__cover-action">смотреть проекты</span>
+          </div>
+        </button>
+
+        <button type="button" class="portfolio__cover" data-portfolio-category="details" aria-pressed="false">
+          <div class="portfolio__cover-img" style="background-image:url('assets/portfolio-cabinet.png');"></div>
+          <div class="portfolio__cover-panel">
+            <span class="portfolio__cover-title">Кабинеты и детали</span>
+            <span class="portfolio__cover-action">смотреть проекты</span>
+          </div>
+        </button>
       </div>
-      <div class="portfolio__grid">
-        <a href="#portfolio" class="portfolio__item animate-on-scroll">
-          <div class="portfolio__img" style="background-image: url('assets/portfolio-livingroom.png');"></div>
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Гостиная</span>
-            <span class="portfolio__link">Смотреть</span>
+
+      <div class="portfolio-viewer animate-on-scroll" id="portfolio-viewer">
+        <div class="portfolio-viewer__group is-active" data-portfolio-group="kitchen">
+          <div class="portfolio-viewer__head">
+            <p class="section__eyebrow">Кухни</p>
+            <h3 class="portfolio-viewer__title">Проекты</h3>
           </div>
-        </a>
-        <a href="#portfolio" class="portfolio__item animate-on-scroll">
-          <div class="portfolio__img" style="background-image: url('assets/portfolio-kitchen.png');"></div>
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Кухня</span>
-            <span class="portfolio__link">Смотреть</span>
+
+          <div class="portfolio__grid">
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/kitchen/Кухня в Липецке.png" tabindex="0" role="button" aria-label="Открыть проект: Кухня в Липецке">
+              <img src="public/portfolio/kitchen/Кухня в Липецке.png" alt="Кухня в Липецке" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Кухня в Липецке</h4>
+                  <p>г. Липецк</p>
+                  <span>графитовые фасады, встроенная техника</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/kitchen/Кухня в Липецкой области.png" tabindex="0" role="button" aria-label="Открыть проект: Кухня в Липецкой области">
+              <img src="public/portfolio/kitchen/Кухня в Липецкой области.png" alt="Кухня в Липецкой области" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Кухня в Липецкой области</h4>
+                  <p>Липецкая область</p>
+                  <span>белый минимализм, чёрная столешница</span>
+                </div>
+              </div>
+            </article>
           </div>
-        </a>
-        <a href="#portfolio" class="portfolio__item animate-on-scroll">
-          <div class="portfolio__img" style="background-image: url('assets/portfolio-bedroom.png');"></div>
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Спальня</span>
-            <span class="portfolio__link">Смотреть</span>
+        </div>
+
+        <div class="portfolio-viewer__group" data-portfolio-group="living">
+          <div class="portfolio-viewer__head">
+            <p class="section__eyebrow">Гостиные</p>
+            <h3 class="portfolio-viewer__title">Проекты</h3>
           </div>
-        </a>
-        <a href="#portfolio" class="portfolio__item animate-on-scroll">
-          <div class="portfolio__img" style="background-image: url('assets/portfolio-cabinet.png');"></div>
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Кабинет</span>
-            <span class="portfolio__link">Смотреть</span>
+
+          <div class="portfolio__grid">
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/living/ГОСТИНАЯ в г.Липецк.png" tabindex="0" role="button" aria-label="Открыть проект: Гостиная в Липецке">
+              <img src="public/portfolio/living/ГОСТИНАЯ в г.Липецк.png" alt="Гостиная в Липецке" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Гостиная в Липецке</h4>
+                  <p>г. Липецк</p>
+                  <span>ТВ-зона, рейки, подвесная тумба</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/living/КАБИНЕТ в пос.РОМАНОВО.png" tabindex="0" role="button" aria-label="Открыть проект: Кабинет в посёлке Романово">
+              <img src="public/portfolio/living/КАБИНЕТ в пос.РОМАНОВО.png" alt="Кабинет в посёлке Романово" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Кабинет в пос. Романово</h4>
+                  <p>пос. Романово</p>
+                  <span>встроенные стеллажи, рабочее пространство</span>
+                </div>
+              </div>
+            </article>
           </div>
-        </a>
+        </div>
+
+        <div class="portfolio-viewer__group" data-portfolio-group="bedroom">
+          <div class="portfolio-viewer__head">
+            <p class="section__eyebrow">Спальни</p>
+            <h3 class="portfolio-viewer__title">Проекты</h3>
+          </div>
+
+          <div class="portfolio__grid">
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/bedroom/moscow-bedroom.png" tabindex="0" role="button" aria-label="Открыть проект: Спальня в Москве">
+              <img src="public/portfolio/bedroom/moscow-bedroom.png" alt="Спальня в Москве" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Спальня в г. Москва</h4>
+                  <p>г. Москва</p>
+                  <span>мягкая панель, встроенная мебель</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="portfolio-viewer__group" data-portfolio-group="bathroom">
+          <div class="portfolio-viewer__head">
+            <p class="section__eyebrow">Ванные</p>
+            <h3 class="portfolio-viewer__title">Проекты</h3>
+          </div>
+
+          <div class="portfolio__grid">
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/bathroom/ВАННАЯ г.Москва.png" tabindex="0" role="button" aria-label="Открыть проект: Ванная в Москве">
+              <img src="public/portfolio/bathroom/ВАННАЯ г.Москва.png" alt="Ванная в Москве" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Ванная, г. Москва</h4>
+                  <p>г. Москва</p>
+                  <span>камень, тёмные фасады, встроенная раковина</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="portfolio-viewer__group" data-portfolio-group="details">
+          <div class="portfolio-viewer__head">
+            <p class="section__eyebrow">Кабинеты и детали</p>
+            <h3 class="portfolio-viewer__title">Проекты</h3>
+          </div>
+
+          <div class="portfolio__grid">
+            <article class="portfolio__item animate-on-scroll" data-image="public/portfolio/details/ШКАФ СПАЛЬНИ г.Москва.png" tabindex="0" role="button" aria-label="Открыть проект: Шкаф спальни в Москве">
+              <img src="public/portfolio/details/ШКАФ СПАЛЬНИ г.Москва.png" alt="Шкаф спальни в Москве" class="portfolio__img" loading="lazy">
+              <div class="portfolio__overlay">
+                <div class="portfolio__meta">
+                  <h4>Шкаф спальни, г. Москва</h4>
+                  <p>г. Москва</p>
+                  <span>графитовые фасады, акцентная стена</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-      <div class="section__actions animate-on-scroll">
-        <a href="#portfolio" class="btn btn--ghost">Все проекты</a>
+
+      <div class="portfolio__lightbox" id="portfolio-lightbox" hidden>
+        <div class="portfolio__lightbox-backdrop" data-portfolio-lightbox-close tabindex="-1"></div>
+        <div class="portfolio__lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="portfolio-lightbox-title">
+          <button type="button" class="portfolio__lightbox-close" data-portfolio-lightbox-close aria-label="Закрыть">×</button>
+          <img class="portfolio__lightbox-img" src="" alt="" id="portfolio-lightbox-img">
+          <div class="portfolio__lightbox-text">
+            <p class="portfolio__lightbox-title" id="portfolio-lightbox-title"></p>
+            <p class="portfolio__lightbox-city"></p>
+            <p class="portfolio__lightbox-lead"></p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -316,13 +459,11 @@
       </div>
       <div class="contacts__grid">
         <div class="contacts__info animate-on-scroll">
-          <a href="tel:+79001234567" class="contact__item">+7 (900) 123-45-67</a>
-          <a href="mailto:info@dubinin-workshop.ru" class="contact__item">info@dubinin-workshop.ru</a>
-          <p class="contact__item">Москва, ул. Примерная, д. 1</p>
+          <a href="tel:+79042858250" class="contact__item">+7 904 285-82-50</a>
+          <p class="contact__item">г. Липецк, ул. Студеновская, 122</p>
           <div class="contacts__social">
-            <a href="https://t.me/dubinin_workshop" class="social__link" target="_blank" rel="noopener" aria-label="Telegram">Telegram</a>
-            <a href="https://wa.me/79001234567" class="social__link" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
-            <a href="https://vk.com/dubinin_workshop" class="social__link" target="_blank" rel="noopener" aria-label="VK">VK</a>
+            <a href="https://t.me/d_vadim48rus_b" class="social__link" target="_blank" rel="noopener" aria-label="Telegram">Telegram</a>
+            <a href="https://wa.me/79042858250" class="social__link" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -344,6 +485,10 @@
         </div>
         <input type="email" name="email" placeholder="Email" class="form__input">
         <textarea name="message" placeholder="Расскажите о вашем проекте" rows="4" class="form__input form__textarea"></textarea>
+        <label class="consultation__consent">
+          <input type="checkbox" name="privacy_consent" value="yes" required class="consultation__consent-input">
+          <span class="consultation__consent-text">Нажимая кнопку, вы соглашаетесь на <a href="policy.html">обработку персональных данных</a></span>
+        </label>
         <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
       </form>
     </div>
@@ -351,19 +496,21 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <a href="#" class="logo footer__logo">
-        <img src="assets/logo.png" alt="Мастерская Вадима Дубинина" class="logo__img">
-      </a>
-      <p class="footer__copyright">© 2025 Мастерская Вадима Дубинина</p>
-      <div class="footer__social">
-        <a href="https://t.me/dubinin_workshop" class="social__link" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://wa.me/79001234567" class="social__link" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#" class="logo footer__logo">
+          <img src="assets/logo.png" alt="Мастерская Вадима Дубинина" class="logo__img">
+        </a>
+        <p class="footer__copyright">© 2026 Мастерская Вадима Дубинина</p>
+        <div class="footer__social">
+          <a href="https://t.me/d_vadim48rus_b" class="social__link" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/79042858250" class="social__link" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
       </div>
+      <p class="footer__legal">Индивидуальный предприниматель Дубинин Вадим Николаевич<br>ИНН: 4825059447<br>ОГРНИП: 324480000025065<br>Адрес: г. Липецк, ул. Студеновская, 122</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
 </html>
-<!-- test -->
